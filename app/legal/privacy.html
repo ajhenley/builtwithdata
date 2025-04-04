@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Built with Data</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/"><span class="highlight">Built</span> with Data</a>
+                </div>
+                <div class="menu-toggle" @click="toggleMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" :class="{ 'active': menuActive }">
+                    <li><a href="/#services" @click="closeMenu">Services</a></li>
+                    <li><a href="/#features" @click="closeMenu">Features</a></li>
+                    <li><a href="/#testimonials" @click="closeMenu">Testimonials</a></li>
+                    <li><a href="/#about" @click="closeMenu">About</a></li>
+                    <li><a href="/#contact" class="btn btn-outline" @click="closeMenu">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="/">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Privacy Policy</span>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Content -->
+        <section class="legal-content">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: March 2024</p>
+
+                <div class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>Built with Data ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. Information We Collect</h2>
+                    <h3>2.1 Personal Information</h3>
+                    <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                    <ul>
+                        <li>Register for an account</li>
+                        <li>Subscribe to our newsletter</li>
+                        <li>Fill out a contact form</li>
+                        <li>Request a demo</li>
+                    </ul>
+
+                    <h3>2.2 Automatically Collected Information</h3>
+                    <p>When you visit our website, we automatically collect certain information about your device, including:</p>
+                    <ul>
+                        <li>IP address</li>
+                        <li>Browser type</li>
+                        <li>Operating system</li>
+                        <li>Access times</li>
+                        <li>Pages viewed</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide and maintain our services</li>
+                        <li>Improve our website and services</li>
+                        <li>Communicate with you</li>
+                        <li>Send you marketing communications (with your consent)</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access your personal information</li>
+                        <li>Correct inaccurate information</li>
+                        <li>Request deletion of your information</li>
+                        <li>Object to processing of your information</li>
+                        <li>Data portability</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                    <p>Email: privacy@builtwithdata.com<br>
+                    Address: 123 Data Street, Tech City, TC 12345</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="/"><span class="highlight">Built</span> with Data</a>
+                        <p>Transforming careers through data-driven insights</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/#services">Services</a></li>
+                                <li><a href="/#features">Features</a></li>
+                                <li><a href="/#testimonials">Testimonials</a></li>
+                                <li><a href="/#about">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Case Studies</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Service</a></li>
+                                <li><a href="cookies.html">Cookie Policy</a></li>
+                                <li><a href="gdpr.html">GDPR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; {{ new Date().getFullYear() }} Built with Data. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html> 

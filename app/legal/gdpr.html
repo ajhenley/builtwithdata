@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance - Built with Data</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/"><span class="highlight">Built</span> with Data</a>
+                </div>
+                <div class="menu-toggle" @click="toggleMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" :class="{ 'active': menuActive }">
+                    <li><a href="/#services" @click="closeMenu">Services</a></li>
+                    <li><a href="/#features" @click="closeMenu">Features</a></li>
+                    <li><a href="/#testimonials" @click="closeMenu">Testimonials</a></li>
+                    <li><a href="/#about" @click="closeMenu">About</a></li>
+                    <li><a href="/#contact" class="btn btn-outline" @click="closeMenu">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="/">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>GDPR Compliance</span>
+            </div>
+        </div>
+
+        <!-- GDPR Content -->
+        <section class="legal-content">
+            <div class="container">
+                <h1>GDPR Compliance</h1>
+                <p class="last-updated">Last Updated: March 2024</p>
+
+                <div class="legal-section">
+                    <h2>1. Introduction</h2>
+                    <p>Built with Data is committed to ensuring the security and protection of the personal information that we process, and to provide a compliant and consistent approach to data protection. We have always had a robust and effective data protection program in place which complies with existing law and abides by the data protection principles.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. Our Commitment</h2>
+                    <p>We are committed to:</p>
+                    <ul>
+                        <li>Protecting individual rights and privacy</li>
+                        <li>Ensuring all personal data is processed lawfully, fairly, and transparently</li>
+                        <li>Maintaining appropriate security measures to protect personal data</li>
+                        <li>Providing clear and accessible information about our data processing activities</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. Data Protection Principles</h2>
+                    <p>We adhere to the following data protection principles:</p>
+                    <ul>
+                        <li>Lawfulness, fairness, and transparency</li>
+                        <li>Purpose limitation</li>
+                        <li>Data minimization</li>
+                        <li>Accuracy</li>
+                        <li>Storage limitation</li>
+                        <li>Integrity and confidentiality</li>
+                        <li>Accountability</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Individual Rights</h2>
+                    <p>Under GDPR, individuals have the following rights:</p>
+                    <ul>
+                        <li>The right to be informed</li>
+                        <li>The right of access</li>
+                        <li>The right to rectification</li>
+                        <li>The right to erasure</li>
+                        <li>The right to restrict processing</li>
+                        <li>The right to data portability</li>
+                        <li>The right to object</li>
+                        <li>Rights in relation to automated decision making and profiling</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including:</p>
+                    <ul>
+                        <li>Encryption of personal data</li>
+                        <li>Regular security assessments</li>
+                        <li>Staff training on data protection</li>
+                        <li>Secure data storage and transfer</li>
+                        <li>Regular backups and disaster recovery procedures</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Data Breach Procedures</h2>
+                    <p>We have procedures in place to detect, report, and investigate a personal data breach. In the event of a breach, we will:</p>
+                    <ul>
+                        <li>Notify affected individuals without undue delay</li>
+                        <li>Report the breach to the relevant supervisory authority</li>
+                        <li>Take steps to mitigate the effects of the breach</li>
+                        <li>Review and improve our security measures</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>7. Contact Us</h2>
+                    <p>If you have any questions about our GDPR compliance, please contact us at:</p>
+                    <p>Email: privacy@builtwithdata.com<br>
+                    Address: 123 Data Street, Tech City, TC 12345</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="/"><span class="highlight">Built</span> with Data</a>
+                        <p>Transforming careers through data-driven insights</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/#services">Services</a></li>
+                                <li><a href="/#features">Features</a></li>
+                                <li><a href="/#testimonials">Testimonials</a></li>
+                                <li><a href="/#about">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Case Studies</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Service</a></li>
+                                <li><a href="cookies.html">Cookie Policy</a></li>
+                                <li><a href="gdpr.html">GDPR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; {{ new Date().getFullYear() }} Built with Data. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html> 

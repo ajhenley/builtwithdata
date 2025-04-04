@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built with Data - Innovative Career Solutions</title>
+    <link rel="stylesheet" href="app/styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><span class="highlight">Built</span> with Data</a>
+                </div>
+                <div class="menu-toggle" @click="toggleMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" :class="{ 'active': menuActive }">
+                    <li><a href="#services" @click="closeMenu">Services</a></li>
+                    <li><a href="#features" @click="closeMenu">Features</a></li>
+                    <li><a href="#testimonials" @click="closeMenu">Testimonials</a></li>
+                    <li><a href="#about" @click="closeMenu">About</a></li>
+                    <li><a href="#contact" class="btn btn-outline" @click="closeMenu">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transform Your Career <span class="highlight">with Data-Driven Insights</span></h1>
+                    <p>Innovative software solutions that empower professionals to make informed career decisions and achieve their full potential.</p>
+                    <div class="hero-buttons">
+                        <a href="#features" class="btn btn-primary">Explore Features</a>
+                        <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="app/public/images/hero-image.svg" alt="Career Analytics Dashboard">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our <span class="highlight">Services</span></h2>
+                    <p>Comprehensive solutions designed to accelerate your career growth</p>
+                </div>
+                <div class="services-grid">
+                    <service-card 
+                        v-for="(service, index) in services" 
+                        :key="index" 
+                        :icon="service.icon" 
+                        :title="service.title" 
+                        :description="service.description">
+                    </service-card>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Powerful <span class="highlight">Features</span></h2>
+                    <p>Tools and insights that give you the competitive edge</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature" v-for="(feature, index) in features" :key="index">
+                        <div class="feature-icon"><i :class="feature.icon"></i></div>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat" v-for="(stat, index) in stats" :key="index">
+                        <h3 class="counter">{{ stat.value }}</h3>
+                        <p>{{ stat.label }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our <span class="highlight">Clients Say</span></h2>
+                    <p>Success stories from professionals who transformed their careers</p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-container" :style="{ transform: `translateX(-${currentTestimonial * 100}%)` }">
+                        <div class="testimonial" v-for="(testimonial, index) in testimonials" :key="index">
+                            <div class="testimonial-content">
+                                <div class="quote"><i class="fas fa-quote-left"></i></div>
+                                <p>{{ testimonial.quote }}</p>
+                                <div class="testimonial-author">
+                                    <img :src="testimonial.image" :alt="testimonial.name">
+                                    <div class="author-info">
+                                        <h4>{{ testimonial.name }}</h4>
+                                        <p>{{ testimonial.position }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-controls">
+                        <button class="prev" @click="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                        <div class="dots">
+                            <span 
+                                v-for="(_, index) in testimonials" 
+                                :key="index" 
+                                :class="{ active: currentTestimonial === index }"
+                                @click="goToTestimonial(index)">
+                            </span>
+                        </div>
+                        <button class="next" @click="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About <span class="highlight">Built with Data</span></h2>
+                        <p>Built with Data was founded with a mission to empower professionals with data-driven insights that transform careers and organizations. We believe that the right information, presented clearly and actionably, can unlock unprecedented potential.</p>
+                        <p>Our team of data scientists, career coaches, and software engineers work together to create tools that simplify complex career decisions and provide clarity in an ever-changing job market.</p>
+                        <div class="about-values">
+                            <div class="value">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Data-Driven</h4>
+                            </div>
+                            <div class="value">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Innovative</h4>
+                            </div>
+                            <div class="value">
+                                <i class="fas fa-users"></i>
+                                <h4>User-Focused</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="app/public/images/about-image.svg" alt="Built with Data Team">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Transform Your <span class="highlight">Career Journey?</span></h2>
+                <p>Join thousands of professionals who have unlocked their full potential with our data-driven tools.</p>
+                <a href="#contact" class="btn btn-primary">Get Started Today</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get in <span class="highlight">Touch</span></h2>
+                    <p>We're here to answer your questions and help you get started</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form @submit.prevent="submitForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" v-model="contactForm.name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" v-model="contactForm.email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" v-model="contactForm.subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" v-model="contactForm.message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Innovation Drive, San Francisco, CA 94103</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@builtwithdata.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="#"><span class="highlight">Built</span> with Data</a>
+                        <p>Transforming careers through data-driven insights</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#testimonials">Testimonials</a></li>
+                                <li><a href="#about">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Case Studies</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="app/legal/privacy.html">Privacy Policy</a></li>
+                                <li><a href="app/legal/terms.html">Terms of Service</a></li>
+                                <li><a href="app/legal/cookies.html">Cookie Policy</a></li>
+                                <li><a href="app/legal/gdpr.html">GDPR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; {{ new Date().getFullYear() }} Built with Data. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app/components/ServiceCard.js"></script>
+    <script src="app/js/main.js"></script>
+</body>
+</html> 

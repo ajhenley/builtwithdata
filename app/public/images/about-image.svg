@@ -1,0 +1,81 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" rx="20" fill="#F5F7FF"/>
+  
+  <!-- Office Setting -->
+  <rect x="50" y="400" width="700" height="150" rx="0" fill="#4361EE" opacity="0.1"/>
+  
+  <!-- Meeting Table -->
+  <ellipse cx="400" cy="450" rx="300" ry="80" fill="#FFFFFF" stroke="#DDD" stroke-width="2"/>
+  
+  <!-- People -->
+  
+  <!-- Person 1 - Data Scientist -->
+  <circle cx="250" cy="350" r="50" fill="#4361EE" opacity="0.2"/>
+  <circle cx="250" cy="320" r="25" fill="#4361EE" opacity="0.3"/>
+  <rect x="225" y="355" width="50" height="60" rx="10" fill="#4361EE" opacity="0.3"/>
+  
+  <!-- Data Visualization Floating Above -->
+  <circle cx="190" cy="250" r="30" fill="#4CC9F0" opacity="0.2"/>
+  <path d="M190 280 L250 310" stroke="#4CC9F0" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="160" y="240" width="60" height="20" rx="5" fill="#FFFFFF" stroke="#4CC9F0" stroke-width="1"/>
+  <rect x="165" y="245" width="20" height="10" fill="#4CC9F0"/>
+  <rect x="195" y="245" width="20" height="10" fill="#4CC9F0" opacity="0.5"/>
+  
+  <!-- Person 2 - Team Lead -->
+  <circle cx="400" cy="330" r="50" fill="#7209B7" opacity="0.2"/>
+  <circle cx="400" cy="300" r="25" fill="#7209B7" opacity="0.3"/>
+  <rect x="375" y="335" width="50" height="60" rx="10" fill="#7209B7" opacity="0.3"/>
+  
+  <!-- Leadership Chart Floating Above -->
+  <circle cx="400" cy="220" r="30" fill="#7209B7" opacity="0.2"/>
+  <path d="M400 250 L400 290" stroke="#7209B7" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M385 215 L415 215 L400 235 Z" fill="#7209B7"/>
+  <circle cx="385" cy="225" r="5" fill="#FFFFFF"/>
+  <circle cx="415" cy="225" r="5" fill="#FFFFFF"/>
+  
+  <!-- Person 3 - Data Analyst -->
+  <circle cx="550" cy="350" r="50" fill="#4361EE" opacity="0.2"/>
+  <circle cx="550" cy="320" r="25" fill="#4361EE" opacity="0.3"/>
+  <rect x="525" y="355" width="50" height="60" rx="10" fill="#4361EE" opacity="0.3"/>
+  
+  <!-- Analytics Floating Above -->
+  <circle cx="610" cy="250" r="30" fill="#4CC9F0" opacity="0.2"/>
+  <path d="M610 280 L550 310" stroke="#4CC9F0" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="590" y="240" width="40" height="30" rx="5" fill="#FFFFFF" stroke="#4CC9F0" stroke-width="1"/>
+  <line x1="595" y1="250" x2="625" y2="250" stroke="#4CC9F0" stroke-width="2"/>
+  <line x1="595" y1="260" x2="615" y2="260" stroke="#4CC9F0" stroke-width="2"/>
+  
+  <!-- Connection Lines Between People -->
+  <line x1="275" y1="350" x2="375" y2="350" stroke="#4361EE" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="425" y1="350" x2="525" y2="350" stroke="#4361EE" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Career Path Elements -->
+  <path d="M180 450 C250 400, 350 500, 400 420 C450 350, 500 450, 550 400 C600 350, 650 400, 700 380" 
+        stroke="#F72585" stroke-width="3" fill="none"/>
+  
+  <!-- Data Elements on Table -->
+  <rect x="350" y="430" width="100" height="40" rx="5" fill="#FFFFFF" stroke="#DDD" stroke-width="1"/>
+  <rect x="360" y="440" width="20" height="20" rx="2" fill="#4361EE" opacity="0.3"/>
+  <rect x="390" y="440" width="50" height="5" rx="2" fill="#333"/>
+  <rect x="390" y="450" width="30" height="5" rx="2" fill="#777"/>
+  
+  <rect x="240" y="440" width="80" height="30" rx="5" fill="#FFFFFF" stroke="#DDD" stroke-width="1"/>
+  <circle cx="255" cy="455" r="8" fill="#4CC9F0" opacity="0.3"/>
+  <rect x="270" y="450" width="40" height="5" rx="2" fill="#333"/>
+  <rect x="270" y="460" width="25" height="5" rx="2" fill="#777"/>
+  
+  <rect x="480" y="435" width="90" height="35" rx="5" fill="#FFFFFF" stroke="#DDD" stroke-width="1"/>
+  <rect x="490" y="445" width="15" height="15" rx="2" fill="#7209B7" opacity="0.3"/>
+  <rect x="515" y="445" width="45" height="5" rx="2" fill="#333"/>
+  <rect x="515" y="455" width="35" height="5" rx="2" fill="#777"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="150" r="50" fill="#4361EE" opacity="0.05"/>
+  <circle cx="650" cy="180" r="70" fill="#7209B7" opacity="0.05"/>
+  <circle cx="400" cy="100" r="40" fill="#F72585" opacity="0.05"/>
+  
+  <!-- Title Text -->
+  <text x="400" y="550" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Built with Data Team</text>
+  <text x="400" y="575" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">Transforming Careers Through Data-Driven Insights</text>
+</svg> 

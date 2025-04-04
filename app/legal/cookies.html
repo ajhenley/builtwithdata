@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Built with Data</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="/"><span class="highlight">Built</span> with Data</a>
+                </div>
+                <div class="menu-toggle" @click="toggleMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" :class="{ 'active': menuActive }">
+                    <li><a href="/#services" @click="closeMenu">Services</a></li>
+                    <li><a href="/#features" @click="closeMenu">Features</a></li>
+                    <li><a href="/#testimonials" @click="closeMenu">Testimonials</a></li>
+                    <li><a href="/#about" @click="closeMenu">About</a></li>
+                    <li><a href="/#contact" class="btn btn-outline" @click="closeMenu">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="/">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Cookie Policy</span>
+            </div>
+        </div>
+
+        <!-- Cookie Policy Content -->
+        <section class="legal-content">
+            <div class="container">
+                <h1>Cookie Policy</h1>
+                <p class="last-updated">Last Updated: March 2024</p>
+
+                <div class="legal-section">
+                    <h2>1. What Are Cookies</h2>
+                    <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide useful information to website owners.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>2. How We Use Cookies</h2>
+                    <p>Built with Data uses cookies for the following purposes:</p>
+                    <ul>
+                        <li>Essential cookies: Required for the website to function properly</li>
+                        <li>Analytics cookies: Help us understand how visitors interact with our website</li>
+                        <li>Functionality cookies: Remember your preferences and settings</li>
+                        <li>Marketing cookies: Used to track visitors across websites</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section">
+                    <h2>3. Types of Cookies We Use</h2>
+                    <h3>3.1 Essential Cookies</h3>
+                    <p>These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you, such as setting your privacy preferences or filling in forms.</p>
+
+                    <h3>3.2 Analytics Cookies</h3>
+                    <p>We use analytics cookies to understand how visitors interact with our website. This helps us improve our website and services.</p>
+
+                    <h3>3.3 Functionality Cookies</h3>
+                    <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.</p>
+
+                    <h3>3.4 Marketing Cookies</h3>
+                    <p>These cookies are used to track visitors across websites. The intention is to display ads that are relevant and engaging for individual users.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>4. Managing Cookies</h2>
+                    <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. However, if you do this, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>5. Third-Party Cookies</h2>
+                    <p>Some cookies are placed by third-party services that appear on our pages. We have no control over these cookies and they are subject to the privacy policies of the respective third parties.</p>
+                </div>
+
+                <div class="legal-section">
+                    <h2>6. Contact Us</h2>
+                    <p>If you have any questions about our use of cookies, please contact us at:</p>
+                    <p>Email: privacy@builtwithdata.com<br>
+                    Address: 123 Data Street, Tech City, TC 12345</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="/"><span class="highlight">Built</span> with Data</a>
+                        <p>Transforming careers through data-driven insights</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="/#services">Services</a></li>
+                                <li><a href="/#features">Features</a></li>
+                                <li><a href="/#testimonials">Testimonials</a></li>
+                                <li><a href="/#about">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Case Studies</a></li>
+                                <li><a href="#">Documentation</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="link-group">
+                            <h4>Legal</h4>
+                            <ul>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms of Service</a></li>
+                                <li><a href="cookies.html">Cookie Policy</a></li>
+                                <li><a href="gdpr.html">GDPR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; {{ new Date().getFullYear() }} Built with Data. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html> 
